@@ -1,0 +1,30 @@
+# Private data
+**/secrets.*
+/private/
+/.local/
+
+# Backups
+*.backup
+*.backup.*
+backup/
+
+# Artifacts
+*.zip
+*.tgz
+*.xz
+*.rar
+*.tar
+*.gzip
+*.log
+*.dump
+*.tmp
+/out/
+/dist/
+
+# IDE
+.vscode/
+
+# NodeJS
+node_modules/
+/out/
+/dist/

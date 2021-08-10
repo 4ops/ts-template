@@ -1,0 +1,81 @@
+{
+    "name": "ts-template",
+    "version": "0.1.0",
+    "description": "TypeScript project template",
+    "keywords": [
+        "typescript",
+        "template"
+    ],
+    "homepage": "https://github.com/4ops/ts-template",
+    "bugs": "https://github.com/4ops/ts-template/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/4ops/ts-template.git"
+    },
+    "license": "MIT",
+    "main": "out/index.js",
+    "types": "out/index.d.ts",
+    "engines": {
+        "node": ">= 16.6.0"
+    },
+    "scripts": {
+        "clean": "rm -rf node_modules out",
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "start": "node ."
+    },
+    "devDependencies": {
+        "@tsconfig/node16": "^1.0.2",
+        "@types/glob": "^7.1.4",
+        "@types/node": "^16.4.10",
+        "@typescript-eslint/eslint-plugin": "^4.29.0",
+        "@typescript-eslint/parser": "^4.29.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "prettier": "^2.3.2",
+        "ts-node": "^10.1.0",
+        "typescript": "^4.3.5"
+    },
+    "dependencies": {},
+    "prettier": {
+        "printWidth": 160,
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": false,
+        "singleQuote": true,
+        "endOfLine": "lf",
+        "overrides": [
+            {
+                "files": [
+                    "*.yml",
+                    "*.yaml"
+                ],
+                "options": {
+                    "tabWidth": 2
+                }
+            }
+        ]
+    },
+    "eslintConfig": {
+        "root": true,
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint",
+            "prettier"
+        ],
+        "extends": [
+            "prettier",
+            "eslint:recommended",
+            "plugin:@typescript-eslint/eslint-recommended",
+            "plugin:@typescript-eslint/recommended"
+        ],
+        "rules": {
+            "@typescript-eslint/no-explicit-any": "warn",
+            "@typescript-eslint/no-non-null-assertion": "warn"
+        }
+    }
+}

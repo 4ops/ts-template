@@ -1,0 +1,15 @@
+{
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "include": ["src/**/*"],
+    "compilerOptions": {
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "outDir": "out",
+        "rootDir": "src",
+        "removeComments": true,
+        "noImplicitAny": true,
+        "strictPropertyInitialization": false,
+        "moduleResolution": "node"
+    }
+}
